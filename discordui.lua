@@ -491,7 +491,7 @@ function DiscordLib:Window(text)
 	
 	UserInputService.InputBegan:Connect(
 		function(io, p)
-			if io.KeyCode == Enum.KeyCode.Insert then
+			if io.KeyCode == Enum.KeyCode.RightControl then
 				if settingsopened == true then
 					settingsopened = false
 					TopFrameHolder.Visible = true
@@ -987,6 +987,7 @@ function DiscordLib:Window(text)
 			):Play()
 			wait(.2)
 			NotificationHolder:Destroy()
+			Discord:Destroy()
 		end)
 		
 		CloseBtn2.MouseEnter:Connect(function()
