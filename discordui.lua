@@ -289,6 +289,7 @@ function DiscordLib:Window(text)
 	CloseBtn.MouseButton1Click:Connect(
 		function()
 			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
+			Discord:Destroy()
 		end
 	)
 
@@ -987,7 +988,6 @@ function DiscordLib:Window(text)
 			):Play()
 			wait(.2)
 			NotificationHolder:Destroy()
-			Discord:Destroy()
 		end)
 		
 		CloseBtn2.MouseEnter:Connect(function()
